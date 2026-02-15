@@ -6,7 +6,7 @@ export default {
       colors: {
         primary: "#356e4d",
         greenAccent: "#E1E0D4",
-        secondary: "#F3EDE3",
+        secondary: "#F3EEE9",
       },
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
