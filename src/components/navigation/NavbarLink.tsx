@@ -12,7 +12,7 @@ const NavbarLink = ({ to, className, buttonText, activeClassName = "" }: NavbarL
     <NavLink
       to={to}
       className={({ isActive }) =>
-        `text-gray-700 hover:text-gray-900 font-medium transition-colors hidden md:block ${className} ${isActive ? `font-bold ${activeClassName}` : ""}`.trim()
+        `text-gray-700 hover:text-gray-900 font-medium transition-colors ${className} ${isActive ? `font-bold ${activeClassName}` : ""}`.trim()
       }
     >
       {buttonText}
