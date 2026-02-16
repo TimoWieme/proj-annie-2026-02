@@ -8,7 +8,7 @@ const categoryFromStandingPlace = (
     case "Sun":
       return "Voor in de zon";
     case "Partial":
-      return "Voor in het halfschaduw";
+      return "Voor in de halfschaduw";
     case "Shadow":
       return "Voor in de schaduw";
     default:
@@ -17,7 +17,7 @@ const categoryFromStandingPlace = (
 };
 
 export const ProductCardSkeleton = () => (
-  <div className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-md">
+  <div className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm">
     <div className="aspect-[4/3] w-full animate-pulse bg-secondary" />
     <div className="flex flex-col gap-3 p-5">
       <div className="h-5 w-20 animate-pulse rounded-full bg-secondary" />
@@ -38,7 +38,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const category = categoryFromStandingPlace(product.standingPlace);
 
   return (
-    <a href={`/producten/${product.id}`} className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-md">
+    <a href={`/producten/${product.id}`} className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm">
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-secondary">
         {(product.photoUrl) ? (
           <img
