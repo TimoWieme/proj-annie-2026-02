@@ -1,6 +1,7 @@
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import type { Product } from "../../types/Product";
 import { categoryFromStandingPlace } from "../../utils/productUtils";
+import { Link } from "react-router-dom";
 
 export const ProductCardSkeleton = () => (
   <div className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm">
@@ -24,7 +25,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const category = categoryFromStandingPlace(product.standingPlace);
 
   return (
-    <a href={`/producten/${product.id}`} className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm">
+    <Link to={`/producten/${product.id}`} className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm">
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-secondary">
         {(product.photoUrl) ? (
           <img
@@ -59,7 +60,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 
