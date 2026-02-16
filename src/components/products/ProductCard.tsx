@@ -1,20 +1,6 @@
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import type { Product } from "../../types/Product";
-
-const categoryFromStandingPlace = (
-  place: Product["standingPlace"]
-): string => {
-  switch (place) {
-    case "Sun":
-      return "Voor in de zon";
-    case "Partial":
-      return "Voor in de halfschaduw";
-    case "Shadow":
-      return "Voor in de schaduw";
-    default:
-      return "Onbekend";
-  }
-};
+import { categoryFromStandingPlace } from "../../utils/productUtils";
 
 export const ProductCardSkeleton = () => (
   <div className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm">
