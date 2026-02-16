@@ -5,6 +5,6 @@ export interface Product {
     diameter: number;
     price: number;
     standingPlace: 'Sun' | 'Partial' | "Shadow";
-    imageUrl: string;
+    photoUrl: string;
     description?: string;
   }

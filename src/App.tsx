@@ -4,9 +4,12 @@ import NavigationBar from "./components/navigation/NavigationBar";
 
 function App() {
   return (
-    <div className="w-full">
+    // Flex container to make sure the footer is at the bottom of the page
+    <div className="flex min-h-screen w-full flex-col">
       <NavigationBar />
-      <AppRouter />
+      <main className="flex-1">
+        <AppRouter />
+      </main>
       <Footer />
     </div>
   );

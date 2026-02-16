@@ -1,16 +1,22 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 interface NavbarLinkProps {
   to: string;
   className?: string;
   buttonText: string;
+  activeClassName?: string;
 }
 
-const NavbarLink = ({ to, className, buttonText }: NavbarLinkProps) => {
+const NavbarLink = ({ to, className, buttonText, activeClassName = "" }: NavbarLinkProps) => {
   return (
-    <Link to={to} className={`text-gray-700 hover:text-gray-900 font-medium transition-colors ${className}`}>
+    <NavLink
+      to={to}
+      className={({ isActive }) =>
+        `text-gray-700 hover:text-gray-900 font-medium transition-colors ${className} ${isActive ? `font-bold ${activeClassName}` : ""}`.trim()
+      }
+    >
       {buttonText}
-    </Link>
+    </NavLink>
   );
 };
 
